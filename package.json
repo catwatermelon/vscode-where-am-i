@@ -2,7 +2,7 @@
   "publisher": "catwatermelon",
   "name": "where-am-i-pn",
   "displayName": "Where Am I? —— Project Name In StatusBar",
-  "version": "0.3.2",
+  "version": "1.0.0",
   "packageManager": "pnpm@10.19.0",
   "description": "Identify your current working folder in status bar",
   "license": "MIT",
