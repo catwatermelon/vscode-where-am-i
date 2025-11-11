@@ -46,12 +46,13 @@ export function getProjectColor(projectName: string, isDark: boolean): string | 
 }
 
 export function getProjectName(projectPath: string) {
+  const parentDir = path.basename(path.dirname(projectPath))
   const projectName = path.basename(projectPath)
   const transform = config.textTransfrom
 
   if (textTransforms[transform])
-    return textTransforms[transform](projectName)
-  return projectName
+    return path.join(textTransforms[transform](parentDir), textTransforms[transform](projectName)) 
+  return path.join(parentDir, projectName)
 }
 
 export function getCommand(): string {
